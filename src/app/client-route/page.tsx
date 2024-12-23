@@ -5,10 +5,9 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useTheme } from "@/components/ThemeProvider";
+import { clientSideFunction } from "@/utils/client-utils";
 
 export default function ClientRoutePage() {
-  const theme = useTheme();
-
-  return <h1 style={{ color: theme.colors.primary }}>Cliente route</h1>;
+  const result = clientSideFunction();
+  return <h1>Cliente route {result}</h1>;
 }
